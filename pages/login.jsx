@@ -29,7 +29,7 @@ export default function LoginPage() {
       const { result } = await res.json();
       console.log(res.status);
       // Si OK, rediriger vers /todos
-      //router.push('/todos');
+      router.push('/todos');
     } catch (err) {
       setError('Erreur réseau');
       console.log('Erreur réseau:', err);
@@ -37,9 +37,9 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="max-w-md mx-auto p-4 mt-20">
-      <h1 className="text-2xl font-bold mb-6 text-center">Connexion</h1>
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+    <div className="max-w-md mx-auto p-4 mt-20 text-center">
+      <h1 className="text-2xl font-bold mb-6 ">Connexion</h1>
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4 ">
         <input
           type="email"
           placeholder="Email"
@@ -64,6 +64,13 @@ export default function LoginPage() {
           Se connecter
         </button>
       </form>
+      <button
+        onClick={() => router.push('/signin')}
+        className="mt-4 w-full bg-gray-300 text-gray-800 p-2 rounded hover:bg-gray-400 transition"
+        type="button"
+      >
+        Créer un compte
+      </button>
     </div>
   );
 }

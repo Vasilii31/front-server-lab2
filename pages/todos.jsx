@@ -50,7 +50,7 @@ export default function TodosPage() {
   if (loading) return <p className="text-center mt-10">Chargement...</p>;
 
   return (
-    <div className="max-w-4xl mx-auto p-4">
+    <div className="max-w-4xl mx-auto p-4 text-center">
       <h1 className="text-3xl font-bold mb-6 text-center">Ma Todo List</h1>
       <TodoForm onAddTodo={handleAddTodo} />
       <TodoList todos={todos} onDeleteTodo={handleDeleteTodo}/>
