@@ -12,7 +12,7 @@ export default function LoginPage() {
 
     setError('');
     try {
-      const res = await fetch('http://10.42.12.43:8080/api/auth/login', {
+      const res = await fetch('https://10.42.12.43:8080/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include', // pour gérer le cookie httpOnly

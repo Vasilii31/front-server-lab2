@@ -11,7 +11,7 @@ export default function TodosPage() {
 
   useEffect(() => {
     if (!authLoading && authenticated) {
-      fetch('http://10.42.12.43:8080/todos', {
+      fetch('https://10.42.12.43:8080/todo', {
         credentials: 'include',
       })
         .then(res => {

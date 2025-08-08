@@ -8,7 +8,7 @@ export default function UsersPage() {
   const [newEmail, setNewEmail] = useState('');
   const [error, setError] = useState(null);
 
-  const API_URL = 'http://10.42.12.43:8080/user';
+  const API_URL = 'https://10.42.12.43:8080/user';
 
   // Récupération des utilisateurs
   useEffect(() => {

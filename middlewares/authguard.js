@@ -7,7 +7,7 @@ export default function useAuthGuard() {
   const [authenticated, setAuthenticated] = useState(false);
 
  useEffect(() => {
-  fetch('http://10.42.12.43:8080/api/auth/me', {
+  fetch('https://10.42.12.43:8080/api/auth/me', {
     credentials: 'include'
   })
     .then(res => res.json())

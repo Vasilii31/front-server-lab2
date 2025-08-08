@@ -8,10 +8,11 @@ export default function TodoForm({ onAddTodo }) {
     if (!text.trim()) return;
 
     try {
-      const res = await fetch('http://10.42.12.43:8080/todo', {
+      const res = await fetch('https://10.42.12.43:8080/todo', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ title:text }),
+        credentials: 'include', // pour gérer le cookie httpOnly
       });
 
       const newTodo = await res.json();
